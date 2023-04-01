@@ -1,6 +1,22 @@
 payload:
   - DOMAIN-SUFFIX,pterclub.com
   - DOMAIN-SUFFIX,zhaopeng.ml
+  jd.com
+hdhome.org
+nanyangpt.com
+hares.top
+hdtime.org
+synology.com
+isvjd.com
+icloud.com.cn
+me.com
+m-team.cc
+springsunday.net
+oracle.com
+oraclecloud.com
+lemonhd.org
+hhanclub.top
+zhaopeng.ml
   # - DOMAIN-KEYWORD,google
   # - DOMAIN,ad.com
   # - SRC-IP-CIDR,192.168.1.201/32
