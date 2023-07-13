@@ -1,0 +1,12 @@
+#!name=91Porn
+#!desc=解锁播放权限
+#软件版本:1.0.2
+#脚本作者:𝒀𝒖𝒉𝒆𝒏𝒈
+#更新时间:20230711
+#使用声明：️此脚本仅供学习与交流，
+
+[Script]
+http-request ^http[s]?://91porn\.com/view_video\.php\?.*viewkey=.*$ script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/91porn.js, requires-body=true, tag=91Porn
+
+[MITM]
+hostname = 91porn.com
