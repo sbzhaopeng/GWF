@@ -1,10 +1,10 @@
 ## Services
 - DOMAIN-KEYWORD,tailscale,DIRECT
 - DOMAIN-KEYWORD,zhaopeng,DIRECT
-- DOMAIN-SUFFIX,openai.com,🇺🇲 美国节点
 - DOMAIN-SUFFIX,sxicbc.top,DIRECT
 - DOMAIN-KEYWORD,adobe,DIRECT
 - DOMAIN-SUFFIX,unraid.net,DIRECT
+- DOMAIN-SUFFIX,nolanstore.cc,DIRECT
 
 ## PT
 - DOMAIN-SUFFIX,m-team.cc,DIRECT
@@ -21,7 +21,4 @@
 - DOMAIN-SUFFIX,btschool.club,DIRECT
 - DOMAIN-SUFFIX,hdarea.co,DIRECT
 - DOMAIN-SUFFIX,hdfans.org,DIRECT
-- DOMAIN-SUFFIX,supes.top,DIRECT
 - DOMAIN-KEYWORD,zimuku,DIRECT
-##- DOMAIN-SUFFIX,,DIRECT
-##- DOMAIN-SUFFIX,,DIRECT
