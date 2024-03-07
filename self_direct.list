@@ -6,7 +6,8 @@
 - DOMAIN-SUFFIX,unraid.net
 - DOMAIN-SUFFIX,nolanstore.cc
 - DOMAIN-KEYWORD,zimuku
-- DOMAIN-KEYWORD,mova
+- DOMAIN-SUFFIX,mova.cf
+- DOMAIN-SUFFIX,mova.pw
 
 ## Wechat
 - DOMAIN-SUFFIX,wechat.com
