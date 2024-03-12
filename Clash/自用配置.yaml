@@ -283,8 +283,7 @@ rule-providers:
    type: http
    behavior: classical
    format: yaml
-   url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Clash/self_direct.yaml?token=GHSAT0AAAAAACOMHW3MFZBV3G6TNRHJ445QZPQHVXQ"
-   path: "./ruleset/SelfDirect.yaml"
+   url: "https://gist.githubusercontent.com/sbzhaopeng/7b2f8170525bb1ea13622fade131ce52/raw/self_direct.yaml"
    interval: 86400
 
 rules:
