@@ -287,7 +287,8 @@ rule-providers:
    interval: 86400
 
 rules:
-  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🎯 全球直连
+  # - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🎯 全球直连
+  - RULE-SET,BanAD,🛑 全球拦截
   - GEOSITE,category-ads-all,🛑 全球拦截
   - GEOIP,private,🎯 全球直连,no-resolve
   - GEOSITE,private,🎯 全球直连
@@ -295,12 +296,11 @@ rules:
   - GEOIP,cn,🎯 全球直连,no-resolve
   - RULE-SET,PrivateTracker,🎯 全球直连
   - RULE-SET,SelfDirect,🎯 全球直连
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,OneDrive,Ⓜ️ 微软服务
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
   - RULE-SET,Telegram,📲 电报服务
   - RULE-SET,OpenAi,💬 OpenAi
   - RULE-SET,ProxyMedia,🌍 国外媒体
   - RULE-SET,GFW,🌍 全球时延优选
-  - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,OneDrive,Ⓜ️ 微软服务
-  - RULE-SET,Microsoft,Ⓜ️ 微软服务
-  - RULE-SET,BanAD,🛑 全球拦截
   - MATCH,🐟 漏网之鱼
