@@ -296,9 +296,9 @@ rule-providers:
 
 rules:
   # - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🎯 全球直连
+  - GEOSITE,category-ads-all,🛑 全球拦截
   - RULE-SET,ADRule,🛑 全球拦截
   - RULE-SET,BanAD,🛑 全球拦截
-  - GEOSITE,category-ads-all,🛑 全球拦截
   - GEOIP,private,🎯 全球直连,no-resolve
   - GEOSITE,private,🎯 全球直连
   - GEOSITE,cn,🎯 全球直连
