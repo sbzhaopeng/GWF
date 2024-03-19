@@ -207,6 +207,14 @@ proxy-groups:
 
 
 rule-providers:
+  ADRule:
+   type: http
+   behavior: domain
+   format: text
+   url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt"
+   path: "./ruleset/adrules_domainset.txt"
+   interval: 86400
+   
   BanAD:
    type: http
    behavior: classical
@@ -288,6 +296,7 @@ rule-providers:
 
 rules:
   # - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🎯 全球直连
+  - RULE-SET,ADRule,🛑 全球拦截
   - RULE-SET,BanAD,🛑 全球拦截
   - GEOSITE,category-ads-all,🛑 全球拦截
   - GEOIP,private,🎯 全球直连,no-resolve
