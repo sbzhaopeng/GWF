@@ -9,6 +9,16 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
+  ☁ WARP节点：
+    type: http
+    path: "./proxy_provider/WARP.yaml"
+    url: https://gist.githubusercontent.com/sbzhaopeng/fc6cdc82073e64cb02c4c0a845a5f578/raw/openwrt
+    interval: 86400
+    filter: 'WARP|Warp|warp'
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
   🇭🇰 香港节点:
     type: http
     path: "./proxy_provider/HK.yaml"
