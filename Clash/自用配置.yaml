@@ -7,17 +7,17 @@ proxy-providers:
     #filter: ''
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: https://www.apple.com/library/test/success.html
       interval: 300
-  ☁ WARP节点:
+  ☁ CloudFlare节点:
     type: http
-    path: "./proxy_provider/WARP.yaml"
+    path: "./proxy_provider/cf.yaml"
     url: https://gist.githubusercontent.com/sbzhaopeng/fc6cdc82073e64cb02c4c0a845a5f578/raw/openwrt
     interval: 86400
-    filter: 'WARP|Warp|warp'
+    filter: 'WARP|Warp|warp|CF|Cf|cf'
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: https://www.apple.com/library/test/success.html
       interval: 300
   🇭🇰 香港节点:
     type: http
@@ -27,7 +27,7 @@ proxy-providers:
     filter: '港|HK|hk|Hong Kong|HongKong|hongkong'
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: https://www.apple.com/library/test/success.html
       interval: 300
   🇯🇵 日本节点:
     type: http
@@ -37,7 +37,7 @@ proxy-providers:
     filter: '日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan'
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: https://www.apple.com/library/test/success.html
       interval: 300
   🇺🇲 美国节点:
     type: http
@@ -47,7 +47,7 @@ proxy-providers:
     filter: '美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States'
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: https://www.apple.com/library/test/success.html
       interval: 300
   🇨🇳 台湾节点:
     type: http
@@ -57,7 +57,7 @@ proxy-providers:
     filter: '台|新北|彰化|TW|Taiwan'
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: https://www.apple.com/library/test/success.html
       interval: 300
   🇸🇬 狮城节点:
     type: http
@@ -67,169 +67,121 @@ proxy-providers:
     filter: '新加坡|坡|狮城|SG|Singapore'
     health-check:
       enable: true
-      url: https://www.gstatic.com/generate_204
+      url: https://www.apple.com/library/test/success.html
       interval: 300
+
 proxy-groups:
   - name: 🌍 全球时延优选
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
       - 🌍 全球节点
     proxies:
-      #- DIRECT
-      #- 🌍 全球节点
-  - name: ☁ WARP时延优选
+  - name: ☁ CF时延优选
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
-      #- 🌍 全球节点
-      - ☁ WARP节点
-      #- 🇯🇵 日本节点
-      #- 🇺🇲 美国节点
-      #- 🇨🇳 台湾节点
-      #- 🇸🇬 狮城节点
-      #- 🇰🇷 韩国节点
+      - ☁ CloudFlare节点
     proxies:
-      #- DIRECT
-      #- 🇭🇰 香港节点
   - name: 🇭🇰 香港时延优选
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
-      #- 🌍 全球节点
       - 🇭🇰 香港节点
-      #- 🇯🇵 日本节点
-      #- 🇺🇲 美国节点
-      #- 🇨🇳 台湾节点
-      #- 🇸🇬 狮城节点
-      #- 🇰🇷 韩国节点
     proxies:
-      #- DIRECT
-      #- 🇭🇰 香港节点
   - name: 🇯🇵 日本时延优选
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
-      #- 🌍 全球节点
-      #- 🇭🇰 香港节点
       - 🇯🇵 日本节点
-      #- 🇺🇲 美国节点
-      #- 🇨🇳 台湾节点
-      #- 🇸🇬 狮城节点
-      #- 🇰🇷 韩国节点
     proxies:
-      #- DIRECT
-      #- 🇯🇵 日本节点
   - name: 🇺🇲 美国时延优选
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
-      #- 🌍 全球节点
-      #- 🇭🇰 香港节点
-      #- 🇯🇵 日本节点
       - 🇺🇲 美国节点
-      #- 🇨🇳 台湾节点
-      #- 🇸🇬 狮城节点
-      #- 🇰🇷 韩国节点
     proxies:
-      #- DIRECT
-      #- 🇺🇲 美国节点
   - name: 🇨🇳 台湾时延优选
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
-      #- 🌍 全球节点
-      #- 🇭🇰 香港节点
-      #- 🇯🇵 日本节点
-      #- 🇺🇲 美国节点
       - 🇨🇳 台湾节点
-      #- 🇸🇬 狮城节点
-      #- 🇰🇷 韩国节点
     proxies:
-      #- DIRECT
-      #- 🇨🇳 台湾节点
   - name: 🇸🇬 狮城时延优选
     type: url-test
-    url: https://www.gstatic.com/generate_204
+    url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
-      #- 🌍 全球节点
-      #- 🇭🇰 香港节点
-      #- 🇯🇵 日本节点
-      #- 🇺🇲 美国节点
-      #- 🇨🇳 台湾节点
       - 🇸🇬 狮城节点
-      #- 🇰🇷 韩国节点
     proxies:
-      #- DIRECT
-      #- 🇸🇬 狮城节点
   - name: 🎯 全球直连
     type: select
     proxies:
-      - DIRECT
-  
+      - DIRECT  
   - name: 🌍 国外媒体
     type: select
     proxies:
-      #- DIRECT
       - 🌍 全球时延优选
       - 🇭🇰 香港时延优选
       - 🇯🇵 日本时延优选
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
-      - 🇸🇬 狮城时延优选
-  
+      - 🇸🇬 狮城时延优选  
+      - ☁ CF时延优选
   - name: 📲 电报服务
     type: select
     proxies:
-      #- DIRECT
       - 🌍 全球时延优选
       - 🇭🇰 香港时延优选
       - 🇯🇵 日本时延优选
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
       - 🇸🇬 狮城时延优选
-
+      - ☁ CF时延优选
+  - name: 👘 日本服务
+    type: select
+    proxies:
+      - 🌍 全球时延优选
+      - 🇭🇰 香港时延优选
+      - 🇯🇵 日本时延优选
+      - 🇺🇲 美国时延优选
+      - 🇨🇳 台湾时延优选
+      - 🇸🇬 狮城时延优选
+      - ☁ CF时延优选
   - name: 💬 OpenAi
     type: select
     proxies:
-      #- DIRECT
       - 🌍 全球时延优选
       - 🇭🇰 香港时延优选
       - 🇯🇵 日本时延优选
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
       - 🇸🇬 狮城时延优选
-
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
-      - 🌍 全球时延优选
-      
+      - 🌍 全球时延优选      
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🎯 全球直连
-      - 🌍 全球时延优选
-      
+      - 🌍 全球时延优选    
   - name: 🛑 全球拦截
     type: select
     proxies:
       - REJECT
-
   - name: 🐟 漏网之鱼
     type: select
     proxies:
       - 🎯 全球直连
       - 🌍 全球时延优选
-
 
 rule-providers:
   ADRule:
@@ -239,7 +191,6 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt"
    path: "./ruleset/adrules_domainset.txt"
    interval: 86400
-   
   BanAD:
    type: http
    behavior: classical
@@ -247,7 +198,6 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
    path: "./ruleset/BanAD.yaml"
    interval: 86400
-  
   Apple:
    type: http
    behavior: classical
@@ -255,7 +205,6 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Apple.yaml"
    path: "./ruleset/Apple.yaml"
    interval: 86400
-  
   GFW:
    type: http
    behavior: classical
@@ -263,7 +212,6 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
    path: "./ruleset/ProxyGFWlist.yaml"
    interval: 86400
-     
   ProxyMedia:
    type: http
    behavior: classical
@@ -271,7 +219,6 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml"
    path: "./ruleset/ProxyMedia.yaml"
    interval: 86400
-     
   PrivateTracker:
    type: http
    behavior: classical
@@ -279,7 +226,6 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/PrivateTracker.yaml"
    path: "./ruleset/PrivateTracker.yaml"
    interval: 86400
-     
   OneDrive:
    type: http
    behavior: classical
@@ -287,7 +233,6 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OneDrive.yaml"
    path: "./ruleset/OneDrive.yaml"
    interval: 86400
-     
   OpenAi:
    type: http
    behavior: classical
@@ -295,7 +240,6 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OpenAi.yaml"
    path: "./ruleset/OpenAi.yaml"
    interval: 86400
-        
   Telegram:
    type: http
    behavior: classical
@@ -303,7 +247,6 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Telegram.yaml"
    path: "./ruleset/Telegram.yaml"
    interval: 86400
-        
   Microsoft:
    type: http
    behavior: classical
@@ -311,12 +254,19 @@ rule-providers:
    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
    path: "./ruleset/Microsoft.yaml"
    interval: 86400
-
   SelfDirect:
    type: http
    behavior: classical
    format: yaml
    url: "https://gist.githubusercontent.com/sbzhaopeng/7b2f8170525bb1ea13622fade131ce52/raw/self_direct.yaml"
+   path: "./ruleset/SelfDirect.yaml"
+   interval: 86400
+  JP_Proxy:
+   type: http
+   behavior: classical
+   format: yaml
+   url: "https://gist.githubusercontent.com/sbzhaopeng/7b2f8170525bb1ea13622fade131ce52/raw/JP_proxy.yaml"
+   path: "./ruleset/JP_Proxy.yaml"
    interval: 86400
 
 rules:
@@ -324,12 +274,13 @@ rules:
   - GEOSITE,category-ads-all,🛑 全球拦截
   - RULE-SET,ADRule,🛑 全球拦截
   - RULE-SET,BanAD,🛑 全球拦截
-  - GEOIP,private,🎯 全球直连,no-resolve
   - GEOSITE,private,🎯 全球直连
   - GEOSITE,cn,🎯 全球直连
+  - GEOIP,private,🎯 全球直连,no-resolve
   - GEOIP,cn,🎯 全球直连,no-resolve
   - RULE-SET,PrivateTracker,🎯 全球直连
   - RULE-SET,SelfDirect,🎯 全球直连
+  - RULE-SET,JP_Proxy,👘 日本服务
   - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,OneDrive,Ⓜ️ 微软服务
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
@@ -338,3 +289,30 @@ rules:
   - RULE-SET,ProxyMedia,🌍 国外媒体
   - RULE-SET,GFW,🌍 全球时延优选
   - MATCH,🐟 漏网之鱼
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:7874
+  nameserver:
+  - 221.11.1.68
+  - 223.5.5.5
+  - 119.29.29.29
+  fallback:
+  - tls://1.1.1.1:853
+  - tls://8.8.8.8:853
+sniffer:
+  enable: true
+  parse-pure-ip: true
+tun:
+  enable: true
+  stack: system
+  device: utun
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
+profile:
+  store-selected: true
+  store-fake-ip: true
