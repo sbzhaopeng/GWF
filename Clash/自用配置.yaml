@@ -9,7 +9,7 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-  ☁ WARP节点：
+  ☁ WARP节点:
     type: http
     path: "./proxy_provider/WARP.yaml"
     url: https://gist.githubusercontent.com/sbzhaopeng/fc6cdc82073e64cb02c4c0a845a5f578/raw/openwrt
