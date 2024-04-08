@@ -79,6 +79,21 @@ proxy-groups:
     proxies:
       #- DIRECT
       #- 🌍 全球节点
+  - name: ☁ WARP时延优选
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    use:
+      #- 🌍 全球节点
+      - ☁ WARP节点
+      #- 🇯🇵 日本节点
+      #- 🇺🇲 美国节点
+      #- 🇨🇳 台湾节点
+      #- 🇸🇬 狮城节点
+      #- 🇰🇷 韩国节点
+    proxies:
+      #- DIRECT
+      #- 🇭🇰 香港节点
   - name: 🇭🇰 香港时延优选
     type: url-test
     url: https://www.gstatic.com/generate_204
