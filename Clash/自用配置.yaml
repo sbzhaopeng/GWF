@@ -77,49 +77,46 @@ proxy-groups:
     interval: 300
     use:
       - 🌍 全球节点
-    proxies:
   - name: ☁ CF时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
       - ☁ CloudFlare节点
-    proxies:
   - name: 🇭🇰 香港时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
       - 🇭🇰 香港节点
-    proxies:
   - name: 🇯🇵 日本时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
       - 🇯🇵 日本节点
-    proxies:
+  - name: 🇯🇵 日本手动选择
+    type: select
+    use:
+      - 🇯🇵 日本节点
   - name: 🇺🇲 美国时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
       - 🇺🇲 美国节点
-    proxies:
   - name: 🇨🇳 台湾时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
       - 🇨🇳 台湾节点
-    proxies:
   - name: 🇸🇬 狮城时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
       - 🇸🇬 狮城节点
-    proxies:
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -150,6 +147,7 @@ proxy-groups:
       - 🌍 全球时延优选
       - 🇭🇰 香港时延优选
       - 🇯🇵 日本时延优选
+      - 🇯🇵 日本手动选择
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
       - 🇸🇬 狮城时延优选
