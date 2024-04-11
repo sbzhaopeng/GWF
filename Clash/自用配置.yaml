@@ -124,7 +124,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT  
-  - name: 🌍 国外媒体
+  - name: 🌍 全球服务
     type: select
     proxies:
       - 🌍 全球时延优选
@@ -134,7 +134,17 @@ proxy-groups:
       - 🇨🇳 台湾时延优选
       - 🇸🇬 狮城时延优选  
       - ☁ CF时延优选
-  - name: 📲 电报服务
+  - name: 🎬 国外媒体
+    type: select
+    proxies:
+      - 🌍 全球时延优选
+      - 🇭🇰 香港时延优选
+      - 🇯🇵 日本时延优选
+      - 🇺🇲 美国时延优选
+      - 🇨🇳 台湾时延优选
+      - 🇸🇬 狮城时延优选  
+      - ☁ CF时延优选
+  - name: 🔞 日本服务
     type: select
     proxies:
       - 🌍 全球时延优选
@@ -144,7 +154,7 @@ proxy-groups:
       - 🇨🇳 台湾时延优选
       - 🇸🇬 狮城时延优选
       - ☁ CF时延优选
-  - name: 👘 日本服务
+  - name: 📲 电报服务
     type: select
     proxies:
       - 🌍 全球时延优选
@@ -163,16 +173,17 @@ proxy-groups:
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
       - 🇸🇬 狮城时延优选
+      - ☁ CF时延优选
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
-      - 🌍 全球时延优选      
+      - 🌍 全球服务    
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🎯 全球直连
-      - 🌍 全球时延优选    
+      - 🌍 全球服务    
   - name: 🛑 全球拦截
     type: select
     proxies:
@@ -181,7 +192,7 @@ proxy-groups:
     type: select
     proxies:
       - 🎯 全球直连
-      - 🌍 全球时延优选
+      - 🌍 全球服务
 
 rule-providers:
   ADRule:
@@ -280,14 +291,14 @@ rules:
   - GEOIP,cn,🎯 全球直连,no-resolve
   - RULE-SET,PrivateTracker,🎯 全球直连
   - RULE-SET,SelfDirect,🎯 全球直连
-  - RULE-SET,JP_Proxy,👘 日本服务
+  - RULE-SET,JP_Proxy,🔞 日本服务
   - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,OneDrive,Ⓜ️ 微软服务
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
   - RULE-SET,Telegram,📲 电报服务
   - RULE-SET,OpenAi,💬 OpenAi
-  - RULE-SET,ProxyMedia,🌍 国外媒体
-  - RULE-SET,GFW,🌍 全球时延优选
+  - RULE-SET,ProxyMedia,🎬 国外媒体
+  - RULE-SET,GFW,🌍 全球服务
   - MATCH,🐟 漏网之鱼
 
 dns:
