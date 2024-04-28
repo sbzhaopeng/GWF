@@ -77,16 +77,28 @@ proxy-groups:
     interval: 300
     use:
       - 🌍 全球节点
+  - name: 🌍 全球手动选择
+    type: select
+    use:
+      - 🌍 全球节点
   - name: ☁ CF时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
       - ☁ CloudFlare节点
+  - name: ☁ CF手动选择
+    type: select
+    use:
+      - ☁ CloudFlare节点
   - name: 🇭🇰 香港时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
+    use:
+      - 🇭🇰 香港节点
+  - name: 🇭🇰 香港手动选择
+    type: select
     use:
       - 🇭🇰 香港节点
   - name: 🇯🇵 日本时延优选
@@ -105,16 +117,28 @@ proxy-groups:
     interval: 300
     use:
       - 🇺🇲 美国节点
+  - name: 🇺🇲 美国手动选择
+    type: select
+    use:
+      - 🇺🇲 美国节点
   - name: 🇨🇳 台湾时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
     use:
       - 🇨🇳 台湾节点
+  - name: 🇨🇳 台湾手动选择
+    type: select
+    use:
+      - 🇨🇳 台湾节点
   - name: 🇸🇬 狮城时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
     interval: 300
+    use:
+      - 🇸🇬 狮城节点
+  - name: 🇸🇬 狮城手动选择
+    type: select
     use:
       - 🇸🇬 狮城节点
   - name: 🎯 全球直连
@@ -125,53 +149,87 @@ proxy-groups:
     type: select
     proxies:
       - 🌍 全球时延优选
+      - ☁ CF时延优选
       - 🇭🇰 香港时延优选
       - 🇯🇵 日本时延优选
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
-      - 🇸🇬 狮城时延优选  
-      - ☁ CF时延优选
+      - 🇸🇬 狮城时延优选
+      - 🌍 全球手动选择
+      - ☁ CF手动选择
+      - 🇭🇰 香港手动选择
+      - 🇯🇵 日本手动选择
+      - 🇺🇲 美国手动选择
+      - 🇨🇳 台湾手动选择
+      - 🇸🇬 狮城手动选择
   - name: 🎬 国外媒体
     type: select
     proxies:
       - 🌍 全球时延优选
+      - ☁ CF时延优选
       - 🇭🇰 香港时延优选
       - 🇯🇵 日本时延优选
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
-      - 🇸🇬 狮城时延优选  
-      - ☁ CF时延优选
+      - 🇸🇬 狮城时延优选
+      - 🌍 全球手动选择
+      - ☁ CF手动选择
+      - 🇭🇰 香港手动选择
+      - 🇯🇵 日本手动选择
+      - 🇺🇲 美国手动选择
+      - 🇨🇳 台湾手动选择
+      - 🇸🇬 狮城手动选择
   - name: 🔞 日本服务
     type: select
     proxies:
       - 🌍 全球时延优选
+      - ☁ CF时延优选
       - 🇭🇰 香港时延优选
       - 🇯🇵 日本时延优选
-      - 🇯🇵 日本手动选择
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
       - 🇸🇬 狮城时延优选
-      - ☁ CF时延优选
+      - 🌍 全球手动选择
+      - ☁ CF手动选择
+      - 🇭🇰 香港手动选择
+      - 🇯🇵 日本手动选择
+      - 🇺🇲 美国手动选择
+      - 🇨🇳 台湾手动选择
+      - 🇸🇬 狮城手动选择
   - name: 📲 电报服务
     type: select
     proxies:
       - 🌍 全球时延优选
+      - ☁ CF时延优选
       - 🇭🇰 香港时延优选
       - 🇯🇵 日本时延优选
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
       - 🇸🇬 狮城时延优选
-      - ☁ CF时延优选
+      - 🌍 全球手动选择
+      - ☁ CF手动选择
+      - 🇭🇰 香港手动选择
+      - 🇯🇵 日本手动选择
+      - 🇺🇲 美国手动选择
+      - 🇨🇳 台湾手动选择
+      - 🇸🇬 狮城手动选择
   - name: 💬 OpenAi
     type: select
     proxies:
       - 🌍 全球时延优选
+      - ☁ CF时延优选
       - 🇭🇰 香港时延优选
       - 🇯🇵 日本时延优选
       - 🇺🇲 美国时延优选
       - 🇨🇳 台湾时延优选
       - 🇸🇬 狮城时延优选
-      - ☁ CF时延优选
+      - 🌍 全球手动选择
+      - ☁ CF手动选择
+      - 🇭🇰 香港手动选择
+      - 🇯🇵 日本手动选择
+      - 🇺🇲 美国手动选择
+      - 🇨🇳 台湾手动选择
+      - 🇸🇬 狮城手动选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -295,6 +353,7 @@ rules:
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
   - RULE-SET,Telegram,📲 电报服务
   - RULE-SET,OpenAi,💬 OpenAi
+  - DOMAIN-SUFFIX,chatgpt.com,💬 OpenAi
   - RULE-SET,ProxyMedia,🎬 国外媒体
   - RULE-SET,GFW,🌍 全球服务
   - MATCH,🐟 漏网之鱼
