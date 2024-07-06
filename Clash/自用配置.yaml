@@ -71,6 +71,12 @@ proxy-providers:
       interval: 300
 
 proxy-groups:
+  - name: ⚖ 全球负载均衡
+    type: load-balance
+    url: https://www.apple.com/library/test/success.html
+    interval: 300
+    use:
+      - 🌍 全球节点
   - name: 🌍 全球时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
@@ -148,6 +154,7 @@ proxy-groups:
   - name: 🌍 全球服务
     type: select
     proxies:
+      - ⚖ 全球负载均衡
       - 🌍 全球时延优选
       - ☁ CF时延优选
       - 🇭🇰 香港时延优选
