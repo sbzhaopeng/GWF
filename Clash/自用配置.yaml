@@ -64,7 +64,7 @@ proxy-providers:
     path: "./proxy_provider/SG.yaml"
     url: https://gist.githubusercontent.com/sbzhaopeng/fc6cdc82073e64cb02c4c0a845a5f578/raw/openwrt
     interval: 86400
-    filter: '新加坡|坡|狮城|SG|Singapore'
+    filter: '新加坡|新加|坡|狮城|SG|Singapore'
     health-check:
       enable: true
       url: https://www.apple.com/library/test/success.html
