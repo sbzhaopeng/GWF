@@ -8,7 +8,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.apple.com/library/test/success.html
-      interval: 300
+      interval: 60
   ☁ CloudFlare节点:
     type: http
     path: "./proxy_provider/proxy.yaml"
@@ -18,7 +18,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.apple.com/library/test/success.html
-      interval: 300
+      interval: 60
   🇭🇰 香港节点:
     type: http
     path: "./proxy_provider/proxy.yaml"
@@ -28,7 +28,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.apple.com/library/test/success.html
-      interval: 300
+      interval: 60
   🇯🇵 日本节点:
     type: http
     path: "./proxy_provider/proxy.yaml"
@@ -38,7 +38,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.apple.com/library/test/success.html
-      interval: 300
+      interval: 60
   🇺🇲 美国节点:
     type: http
     path: "./proxy_provider/proxy.yaml"
@@ -48,7 +48,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.apple.com/library/test/success.html
-      interval: 300
+      interval: 60
   🇨🇳 台湾节点:
     type: http
     path: "./proxy_provider/proxy.yaml"
@@ -58,7 +58,7 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.apple.com/library/test/success.html
-      interval: 300
+      interval: 60
   🇸🇬 狮城节点:
     type: http
     path: "./proxy_provider/proxy.yaml"
@@ -68,11 +68,33 @@ proxy-providers:
     health-check:
       enable: true
       url: https://www.apple.com/library/test/success.html
-      interval: 300
+      interval: 60
 
 proxy-groups:
 
+  - name: 📟 国外社交
+    type: select
+    proxies:
+      - 🌍 全球策略
+      - ☁ CF策略
+      - 🇭🇰 香港策略
+      - 🇯🇵 日本策略
+      - 🇺🇲 美国策略
+      - 🇨🇳 台湾策略
+      - 🇸🇬 狮城策略
+
   - name: 🎬 国外媒体
+    type: select
+    proxies:
+      - 🌍 全球策略
+      - ☁ CF策略
+      - 🇭🇰 香港策略
+      - 🇯🇵 日本策略
+      - 🇺🇲 美国策略
+      - 🇨🇳 台湾策略
+      - 🇸🇬 狮城策略
+
+  - name: 🧑‍💻 代码托管
     type: select
     proxies:
       - 🌍 全球策略
@@ -196,14 +218,14 @@ proxy-groups:
   - name: 🌍 全球负载均衡
     type: load-balance
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     strategy: consistent-hashing
     use:
       - 🌍 全球节点
   - name: 🌍 全球时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     use:
       - 🌍 全球节点
   - name: 🌍 全球手动选择
@@ -213,14 +235,14 @@ proxy-groups:
   - name: ☁ CF负载均衡
     type: load-balance
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     strategy: consistent-hashing
     use:
       - ☁ CloudFlare节点
   - name: ☁ CF时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     use:
       - ☁ CloudFlare节点
   - name: ☁ CF手动选择
@@ -230,14 +252,14 @@ proxy-groups:
   - name: 🇭🇰 香港负载均衡
     type: load-balance
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     strategy: consistent-hashing
     use:
       - 🇭🇰 香港节点
   - name: 🇭🇰 香港时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     use:
       - 🇭🇰 香港节点
   - name: 🇭🇰 香港手动选择
@@ -247,14 +269,14 @@ proxy-groups:
   - name: 🇯🇵 日本负载均衡
     type: load-balance
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     strategy: consistent-hashing
     use:
       - 🇯🇵 日本节点
   - name: 🇯🇵 日本时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     use:
       - 🇯🇵 日本节点
   - name: 🇯🇵 日本手动选择
@@ -264,14 +286,14 @@ proxy-groups:
   - name: 🇺🇲 美国负载均衡
     type: load-balance
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     strategy: consistent-hashing
     use:
       - 🇺🇲 美国节点
   - name: 🇺🇲 美国时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     use:
       - 🇺🇲 美国节点
   - name: 🇺🇲 美国手动选择
@@ -281,14 +303,14 @@ proxy-groups:
   - name: 🇨🇳 台湾负载均衡
     type: load-balance
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     strategy: consistent-hashing
     use:
       - 🇨🇳 台湾节点
   - name: 🇨🇳 台湾时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     use:
       - 🇨🇳 台湾节点
   - name: 🇨🇳 台湾手动选择
@@ -298,14 +320,14 @@ proxy-groups:
   - name: 🇸🇬 狮城负载均衡
     type: load-balance
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     strategy: consistent-hashing
     use:
       - 🇸🇬 狮城节点
   - name: 🇸🇬 狮城时延优选
     type: url-test
     url: https://www.apple.com/library/test/success.html
-    interval: 300
+    interval: 60
     use:
       - 🇸🇬 狮城节点
   - name: 🇸🇬 狮城手动选择
@@ -368,7 +390,7 @@ rule-providers:
    type: http
    behavior: classical
    format: yaml
-   url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OpenAi.yaml"
+   url: "https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml"
    path: "./ruleset/OpenAi.yaml"
    interval: 86400
   Telegram:
@@ -406,6 +428,20 @@ rule-providers:
    url: "https://gist.githubusercontent.com/sbzhaopeng/7b2f8170525bb1ea13622fade131ce52/raw/CF.yaml"
    path: "./ruleset/CF.yaml"
    interval: 86400
+  Github:
+   type: http
+   behavior: classical
+   format: yaml
+   url: "https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/GitHub/GitHub_No_Resolve.yaml"
+   path: "./ruleset/Github.yaml"
+   interval: 86400
+  Twitter:
+   type: http
+   behavior: classical
+   format: yaml
+   url: "https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml"
+   path: "./ruleset/Twitter.yaml"
+   interval: 86400
 
 rules:
   # - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,🎯 全球直连
@@ -425,7 +461,8 @@ rules:
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
   - RULE-SET,Telegram,📲 电报服务
   - RULE-SET,OpenAi,💬 OpenAi
-  - DOMAIN-SUFFIX,chatgpt.com,💬 OpenAi
+  - RULE-SET,Github,🧑‍💻 代码托管
+  - RULE-SET,Twitter,📟 国外社交
   - RULE-SET,ProxyMedia,🎬 国外媒体
   - RULE-SET,GFW,🌍 全球策略
   - MATCH,🐟 漏网之鱼
@@ -436,15 +473,27 @@ dns:
   fake-ip-range: 198.18.0.1/16
   listen: 0.0.0.0:7874
   nameserver:
-  - 221.11.1.68
-  - 223.5.5.5
-  - 119.29.29.29
+   - 221.11.1.68
+   - 223.5.5.5
+   - 119.29.29.29
   fallback:
-  - tls://1.1.1.1:853
-  - tls://8.8.8.8:853
+   - tls://1.1.1.1:853
+   - tls://8.8.8.8:853
 sniffer:
   enable: true
+  force-dns-mapping: true
   parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  # force-domain:
+  # skip-domain:
 tun:
   enable: true
   stack: system
