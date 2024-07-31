@@ -3,6 +3,9 @@ http-request ^http:\/\/175\.178\.221\.123:80\/xpg\.html script-path=https://raw.
 http-response ^http:\/\/175\.178\.221\.123:80\/xpg\.html script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js, requires-body=true
 http-request ^http:\/\/175\.178\.221\.123\/tll\/tll2024\.php script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js, requires-body=true
 http-response ^http:\/\/175\.178\.221\.123\/tll\/tll2024\.php script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js, requires-body=true
+http-request ^http:\/\/23\.224\.81\.94:80\/xpg\.html script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js, requires-body=true
+http-response ^http:\/\/23\.224\.81\.94:80\/xpg\.html script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js, requires-body=true
 
 [MITM]
-hostname = 175.178.221.123
+hostname = 175.178.221.123, 23.224.81.94
+
