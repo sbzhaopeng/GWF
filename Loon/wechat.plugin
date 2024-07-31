@@ -1,8 +1,8 @@
 [Script]
-http-request ^http:\/\/175\.178\.221\.123:80\/xpg\.html script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js?token=GHSAT0AAAAAACS5TEN7AO7DKTWCNCRYA5BYZVJWGTA, requires-body=true
-http-response ^http:\/\/175\.178\.221\.123:80\/xpg\.html script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js?token=GHSAT0AAAAAACS5TEN7AO7DKTWCNCRYA5BYZVJWGTA, requires-body=true
-http-request ^http:\/\/175\.178\.221\.123\/tll\/tll2024\.php script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js?token=GHSAT0AAAAAACS5TEN7AO7DKTWCNCRYA5BYZVJWGTA, requires-body=true
-http-response ^http:\/\/175\.178\.221\.123\/tll\/tll2024\.php script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js?token=GHSAT0AAAAAACS5TEN7AO7DKTWCNCRYA5BYZVJWGTA, requires-body=true
+http-request ^http:\/\/175\.178\.221\.123:80\/xpg\.html script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js, requires-body=true
+http-response ^http:\/\/175\.178\.221\.123:80\/xpg\.html script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js, requires-body=true
+http-request ^http:\/\/175\.178\.221\.123\/tll\/tll2024\.php script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js, requires-body=true
+http-response ^http:\/\/175\.178\.221\.123\/tll\/tll2024\.php script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/main/Script/wechat.js, requires-body=true
 
 [MITM]
 hostname = 175.178.221.123
