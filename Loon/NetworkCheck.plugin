@@ -1,12 +1,17 @@
 #!name=网络类型检测
-#!desc=检测当前网络为蜂窝数据或Wi-Fi，并弹出通知提示
-#!author=ChatGPT
-#!version=1.0
+#!desc=检测当前网络为蜂窝数据或Wi-Fi，兼容 Tunnel 模式
+#!openUrl=https://network-check.loon/
+#!author=chxm1023[https://github.com/chxm1023]
+#!tag=网络,检测
+#!system=
+#!system_version=
+#!loon_version=3.3.4(898)
 #!homepage=https://chat.openai.com
+#!icon=https://gitlab.com/isous/loonresource/-/raw/main/Icon/Emby.png
+#!date=2025-10-08 14:00:00
 
 [Script]
-# 通过访问指定网址触发脚本
-http-request ^https?:\/\/network-check\.loon(\/.*)? script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/refs/heads/main/Script/network_check.js,requires-body=false,timeout=10,tag=网络类型检测
+http-request ^https?:\/\/network-check\.loon(\/.*)? script-path=network_check.js,requires-body=false,timeout=10,tag=网络类型检测
 
-[MITM]
-hostname = network-check.loon
+[MitM]
+hostname=*
