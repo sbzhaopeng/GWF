@@ -1,15 +1,5 @@
-#!name=网络类型检测
-#!desc=检测当前网络为蜂窝数据或Wi-Fi，兼容 Tunnel 模式
-#!openUrl=https://network-check.loon/
-#!author=chxm1023[https://github.com/chxm1023]
-#!tag=网络,检测
-#!system=
-#!system_version=
-#!loon_version=3.3.4(898)
-#!homepage=https://network-check.loon/
-
 [Script]
-http-request ^https?:\/\/network-check\.loon(\/.*)? script-path=network_check.js,requires-body=false,timeout=10,tag=网络类型检测
+http-request /network-check-tunnel script-path=network_check_tunnel.js,requires-body=false,timeout=10,tag=网络类型检测（Tunnel）
 
 [MitM]
-hostname=network-check.loon
+hostname=*
