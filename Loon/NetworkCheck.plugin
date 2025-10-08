@@ -7,8 +7,6 @@
 #!system_version=
 #!loon_version=3.3.4(898)
 #!homepage=https://network-check.loon/
-#!icon=https://gitlab.com/isous/loonresource/-/raw/main/Icon/Emby.png
-#!date=2025-10-08 14:00:00
 
 [Script]
 http-request ^https?:\/\/network-check\.loon(\/.*)? script-path=network_check.js,requires-body=false,timeout=10,tag=网络类型检测
