@@ -6,7 +6,7 @@
 
 [Script]
 # 通过访问指定网址触发脚本
-网络检测 = type=http-request,pattern=^https?:\/\/network-check\.loon,script-path=network_check.js,timeout=10
+网络检测 = type=http-request,pattern=^https?:\/\/network-check\.loon,script-path=https://raw.githubusercontent.com/sbzhaopeng/GWF/refs/heads/main/Script/network_check.js,timeout=10
 
 [MITM]
 hostname = network-check.loon
