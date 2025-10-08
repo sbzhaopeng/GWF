@@ -1,29 +1,39 @@
 /**
- * Loon 网络类型检测脚本
- * 作者: ChatGPT
- * 功能: 通过 http 请求触发，检测网络类型并显示通知
+ * network_check.js
+ * Loon 网络类型检测脚本（本地插件配套脚本）
+ * 触发方式：在浏览器访问 https://network-check.loon/
+ *
+ * 功能：判断当前为 Wi-Fi 或 蜂窝数据并弹出通知；在控制台输出详细信息
  */
 
-if (typeof $network === "undefined") {
-  $notification.post("网络检测失败", "Loon 未提供网络信息", "请确保通过 HTTP 请求触发执行");
-  $done({});
-} else {
-  let title = "📡 当前网络状态";
+(function () {
+  if (typeof $network === "undefined") {
+    $notification.post("网络检测 - 失败", "Loon 未提供网络信息", "请通过 http-request 触发（访问 https://network-check.loon/）");
+    $done({});
+    return;
+  }
+
+  let title = "📡 网络类型检测";
   let subtitle = "";
   let detail = "";
 
-  if ($network.wifi) {
-    subtitle = "Wi-Fi 网络";
-    detail = `SSID：${$network.ssid || "未知"}\nBSSID：${$network.bssid || "未知"}\nIP：${$network.ipv4 || "无IPv4"}`;
-  } else if ($network.cellular) {
-    subtitle = "蜂窝数据网络";
-    detail = `运营商：${$network.carrier || "未知"}\nIP：${$network.ipv4 || "无IPv4"}`;
-  } else {
-    subtitle = "无网络连接";
-    detail = "请检查网络状态。";
+  try {
+    if ($network.wifi) {
+      subtitle = "Wi-Fi 网络";
+      detail = `SSID：${$network.ssid || "未知"}\nBSSID：${$network.bssid || "未知"}\nIP：${$network.ipv4 || "无IPv4"}`;
+    } else if ($network.cellular) {
+      subtitle = "蜂窝数据（移动数据）";
+      detail = `运营商：${$network.carrier || "未知"}\nIP：${$network.ipv4 || "无IPv4"}`;
+    } else {
+      subtitle = "网络状态未知或无网络";
+      detail = "请检查设备网络连接。";
+    }
+  } catch (e) {
+    subtitle = "检测异常";
+    detail = `错误：${e && e.message ? e.message : JSON.stringify(e)}`;
   }
 
   $notification.post(title, subtitle, detail);
-  console.log(`${subtitle}\n${detail}`);
+  console.log(`${title}\n${subtitle}\n${detail}`);
   $done({});
-}
+})();
