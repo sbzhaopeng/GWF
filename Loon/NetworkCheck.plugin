@@ -1,0 +1,12 @@
+#!name=网络类型检测
+#!desc=检测当前网络为蜂窝数据或Wi-Fi，并弹出通知提示
+#!author=ChatGPT
+#!version=1.0
+#!homepage=https://chat.openai.com
+
+[Script]
+# 通过访问指定网址触发脚本
+网络检测 = type=http-request,pattern=^https?:\/\/network-check\.loon,script-path=network_check.js,timeout=10
+
+[MITM]
+hostname = network-check.loon
