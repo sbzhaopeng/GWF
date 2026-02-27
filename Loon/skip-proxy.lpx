@@ -9,5 +9,5 @@
 
 [General]
 skip-proxy = www.baidu.com,mobileapm.icbc.com.cn,api.map.baidu.com,emmbyodlr.icbc.com.cn,obcp-app-msgnap-02.icbc.com.cn,emm.icbc.com.cn,www.abc_testunreachable.com
-real-ip = www.baidu.com,icbc.com.cn,api.map.baidu.com,*.icbc.com.cn,www.abc_testunreachable.com,api.map.n.shifen.com,*.shifen.com,mccp-web.icbc
-bypass-tun = icbc.com.cn,*.icbc.com.cn,mccp-web.icbc,www.abc_testunreachable.com,58.240.0.0/12,61.128.0.0/10,211.64.0.0/10,117.128.0.0/10,116.224.0.0/12,140.206.0.0/15,180.160.0.0/12
+real-ip = www.baidu.com,icbc.com.cn,api.map.baidu.com,*.icbc.com.cn,www.abc_testunreachable.com,api.map.n.shifen.com,*.shifen.com,mccp-web.icbc,utoken.umeng.com,ulogs.umeng.com
+bypass-tun = icbc.com.cn,*.icbc.com.cn,mccp-web.icbc,www.abc_testunreachable.com,utoken.umeng.com,ulogs.umeng.com,58.240.0.0/12,61.128.0.0/10,211.64.0.0/10,117.128.0.0/10,116.224.0.0/12,140.206.0.0/15,180.160.0.0/12
