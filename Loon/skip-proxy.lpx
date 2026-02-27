@@ -9,4 +9,4 @@
 
 [General]
 skip-proxy = www.baidu.com,mobileapm.icbc.com.cn,api.map.baidu.com,emmbyodlr.icbc.com.cn,obcp-app-msgnap-02.icbc.com.cn,emm.icbc.com.cn,www.abc_testunreachable.com
-real-ip = www.baidu.com,mobileapm.icbc.com.cn,api.map.baidu.com,emmbyodlr.icbc.com.cn,obcp-app-msgnap-02.icbc.com.cn,emm.icbc.com.cn,www.abc_testunreachable.com,api.map.n.shifen.com,*.shifen.com
+real-ip = www.baidu.com,icbc.com.cn,api.map.baidu.com,*.icbc.com.cn,www.abc_testunreachable.com,api.map.n.shifen.com,*.shifen.com
