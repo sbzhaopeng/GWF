@@ -8,5 +8,5 @@
 #!homepage = https://github.com/Tartarus2014/Loon-Script/blob/master/Plugin/skip-proxy.md
 
 [General]
-skip-proxy = www.baidu.com,mobileapm.icbc.com.cn,api.map.baidu.com,emmbyodlr.icbc.com.cn,obcp-app-msgnap-02.icbc.com.cn,emm.icbc.com.cn
-real-ip = www.baidu.com,mobileapm.icbc.com.cn,api.map.baidu.com,emmbyodlr.icbc.com.cn,obcp-app-msgnap-02.icbc.com.cn,emm.icbc.com.cn
+skip-proxy = www.baidu.com,mobileapm.icbc.com.cn,api.map.baidu.com,emmbyodlr.icbc.com.cn,obcp-app-msgnap-02.icbc.com.cn,emm.icbc.com.cn,www.abc_testunreachable.com
+real-ip = www.baidu.com,mobileapm.icbc.com.cn,api.map.baidu.com,emmbyodlr.icbc.com.cn,obcp-app-msgnap-02.icbc.com.cn,emm.icbc.com.cn,www.abc_testunreachable.com
