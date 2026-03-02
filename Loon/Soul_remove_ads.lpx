@@ -35,8 +35,8 @@ vist=switch,"false","true",tag=主页访问数量提示,desc=开启/关闭功能
 planetPage=switch,"false","true",tag=星球页面,desc=开启/关闭功能
 
 [Rule]
-IP-CIDR, 8.210.3.170/32, PROXY, no-resolve
-IP-CIDR, 47.75.72.47/32, PROXY, no-resolve
+IP-CIDR, 8.210.3.170/32, PROXY,no-resolve
+IP-CIDR, 47.75.72.47/32, PROXY,no-resolve
 
 [Rewrite]
 # 广告下发
