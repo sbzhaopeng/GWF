@@ -10,3 +10,4 @@
 [General]
 skip-proxy = *.mova.gq,*.mova.cf
 real-ip = *.mova.gq,*.mova.cf
+bypass-tun = *.mova.gq,*.mova.cf
